@@ -1,0 +1,25 @@
+{
+  "schema": "terj-rmt-production-plan-v1",
+  "status": "frozen-before-production",
+  "created_date": "2026-09-29",
+  "matching_manifest": "manifests/rmt_matching_v1.json",
+  "feature_manifest": "manifests/feature_plan_v1.json",
+  "analysis_sizes": [48, 128, 256, 512, 1024],
+  "matrix_size_rule": {
+    "gue": "2*analysis_size",
+    "goe": "2*analysis_size",
+    "wishart": "2*analysis_size",
+    "cue": "2*analysis_size",
+    "poisson": "analysis_size"
+  },
+  "ensembles": {
+    "gue": {"role": "riemann_primary_null", "reps_per_size": 5000, "seed_base": 2026100100},
+    "wishart": {"role": "neural_primary_null", "reps_per_size": 5000, "seed_base": 2026100200},
+    "goe": {"role": "beta1_universality_control", "reps_per_size": 3000, "seed_base": 2026100300},
+    "poisson": {"role": "nonrepulsive_negative_control", "reps_per_size": 5000, "seed_base": 2026100400},
+    "cue": {"role": "riemann_beta2_sensitivity_control", "reps_per_size": 1000, "seed_base": 2026100500}
+  },
+  "seed_rule": "seed = seed_base + analysis_size",
+  "total_samples": 95000,
+  "holdout_policy": "1e22 strict holdout is not read, parsed, converted, or used during RMT production"
+}
