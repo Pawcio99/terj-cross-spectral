@@ -1,0 +1,23 @@
+# duże dane eksperymentalne
+/raw/
+/tmp/
+/logs/
+
+# dane pochodne generowane lokalnie
+/derived/
+/controls/
+/stage_a/outputs/
+
+# eksporty tymczasowe
+/exports/cloud/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# system/editor
+.DS_Store
+*~
+*.swp

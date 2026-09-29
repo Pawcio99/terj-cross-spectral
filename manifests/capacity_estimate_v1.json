@@ -1,0 +1,17 @@
+{
+  "runs_total": 300,
+  "runs_per_width": 60,
+  "epochs_per_run": 51,
+  "parameter_history_bytes": 143145184320,
+  "adam_m_v_history_bytes": 72975976320,
+  "eigenvalue_history_bytes": 96353280,
+  "estimated_raw_bytes": 216217513920,
+  "recommended_15pct_headroom_bytes": 248650141007,
+  "GiB": {
+    "parameter_history": 133.31434160470963,
+    "adam_m_v_history": 67.9641741514206,
+    "eigenvalue_history": 0.0897359848022461,
+    "estimated_raw": 201.36825174093246,
+    "with_15pct_headroom": 231.573489501141
+  }
+}

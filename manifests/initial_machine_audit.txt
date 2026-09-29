@@ -1,0 +1,57 @@
+created=2026-09-29T09:09:05+02:00
+host=BSD
+kernel=7.0.0-34-generic
+python=Python 3.14.4
+
+Architektura:                        x86_64
+Tryb(y) pracy CPU:                   32-bit, 64-bit
+Rozmiary adresów:                    39 bits physical, 48 bits virtual
+Kolejność bajtów:                    Little Endian
+CPU:                                 8
+Lista aktywnych CPU:                 0-7
+ID producenta:                       GenuineIntel
+Nazwa modelu:                        11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+Rodzina CPU:                         6
+Model:                               140
+Wątków na rdzeń:                     2
+Rdzeni na gniazdo:                   4
+Gniazd:                              1
+Wersja:                              1
+Skalowanie MHz CPU:                  79%
+CPU max MHz:                         4700,0000
+CPU min MHz:                         400,0000
+BogoMIPS:                            5606,40
+Flagi:                               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect md_clear ibt flush_l1d arch_capabilities
+Wirtualizacja:                       VT-x
+Cache L1d:                           192 KiB (4 instancje)
+Cache L1i:                           128 KiB (4 instancje)
+Cache L2:                            5 MiB (4 instancje)
+Cache L3:                            12 MiB (1 instancja)
+Węzłów NUMA:                         1
+Procesory węzła NUMA 0:              0-7
+Podatność Gather data sampling:      Vulnerable
+Podatność Ghostwrite:                Not affected
+Podatność Indirect target selection: Mitigation; Aligned branch/return thunks
+Podatność Itlb multihit:             Not affected
+Podatność L1tf:                      Not affected
+Podatność Mds:                       Not affected
+Podatność Meltdown:                  Not affected
+Podatność Mmio stale data:           Not affected
+Podatność Old microcode:             Not affected
+Podatność Reg file data sampling:    Not affected
+Podatność Retbleed:                  Not affected
+Podatność Spec rstack overflow:      Not affected
+Podatność Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Podatność Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Podatność Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Podatność Srbds:                     Not affected
+Podatność Tsa:                       Not affected
+Podatność Tsx async abort:           Not affected
+Podatność Vmscape:                   Not affected
+
+               razem       użyte       wolne    dzielone   buf/cache    dostępne
+Pamięć:         30Gi        14Gi       3,7Gi       3,1Gi        12Gi        15Gi
+Wymiana:        23Gi          0B        23Gi
+
+System plików                     Typ  rozm. użyte dost. %uż. zamont. na
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4  466G  111G  331G  26% /

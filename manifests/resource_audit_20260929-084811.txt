@@ -1,0 +1,261 @@
+=== CZAS ===
+2026-09-29T08:48:10+02:00
+
+=== HOST / KERNEL ===
+BSD
+Linux BSD 7.0.0-34-generic #34-Ubuntu SMP PREEMPT_DYNAMIC Wed Sep  2 14:29:37 UTC 2026 x86_64 GNU/Linux
+
+=== CPU ===
+Architektura:                        x86_64
+Tryb(y) pracy CPU:                   32-bit, 64-bit
+Rozmiary adresów:                    39 bits physical, 48 bits virtual
+Kolejność bajtów:                    Little Endian
+CPU:                                 8
+Lista aktywnych CPU:                 0-7
+ID producenta:                       GenuineIntel
+Nazwa modelu:                        11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+Rodzina CPU:                         6
+Model:                               140
+Wątków na rdzeń:                     2
+Rdzeni na gniazdo:                   4
+Gniazd:                              1
+Wersja:                              1
+Skalowanie MHz CPU:                  61%
+CPU max MHz:                         4700,0000
+CPU min MHz:                         400,0000
+BogoMIPS:                            5606,40
+Flagi:                               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect md_clear ibt flush_l1d arch_capabilities
+Wirtualizacja:                       VT-x
+Cache L1d:                           192 KiB (4 instancje)
+Cache L1i:                           128 KiB (4 instancje)
+Cache L2:                            5 MiB (4 instancje)
+Cache L3:                            12 MiB (1 instancja)
+Węzłów NUMA:                         1
+Procesory węzła NUMA 0:              0-7
+Podatność Gather data sampling:      Vulnerable
+Podatność Ghostwrite:                Not affected
+Podatność Indirect target selection: Mitigation; Aligned branch/return thunks
+Podatność Itlb multihit:             Not affected
+Podatność L1tf:                      Not affected
+Podatność Mds:                       Not affected
+Podatność Meltdown:                  Not affected
+Podatność Mmio stale data:           Not affected
+Podatność Old microcode:             Not affected
+Podatność Reg file data sampling:    Not affected
+Podatność Retbleed:                  Not affected
+Podatność Spec rstack overflow:      Not affected
+Podatność Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Podatność Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Podatność Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Podatność Srbds:                     Not affected
+Podatność Tsa:                       Not affected
+Podatność Tsx async abort:           Not affected
+Podatność Vmscape:                   Not affected
+
+=== RAM / SWAP ===
+               razem       użyte       wolne    dzielone   buf/cache    dostępne
+Pamięć:         30Gi        15Gi       3,6Gi       3,1Gi        12Gi        15Gi
+Wymiana:        23Gi          0B        23Gi
+
+=== FILESYSTEM HOME ===
+System plików                     Typ  rozm. użyte dost. %uż. zamont. na
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4  466G  111G  331G  26% /
+
+=== FILESYSTEM — DOKŁADNE BAJTY ===
+System plików                     Typ         1B-bl        użyte        dost. %uż. zamont. na
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4 499680116736 118836240384 355386339328  26% /
+
+=== INODE ===
+System plików                       iwęzły użyteI   wolneI %uż.I zamont. na
+/dev/mapper/ubuntu--vg-ubuntu--lv 31055872 558098 30497774    2% /
+
+=== MOUNT HOME ===
+TARGET SOURCE                            FSTYPE OPTIONS
+/      /dev/mapper/ubuntu--vg-ubuntu--lv ext4   rw,relatime
+
+=== DYSKI ===
+NAME                        MODEL                          SERIAL              SIZE ROTA TYPE  FSTYPE      FSAVAIL FSUSE% MOUNTPOINTS
+loop0                                                                         66,8M    0 loop  squashfs          0   100% /snap/core24/1643
+loop1                                                                            4K    0 loop  squashfs          0   100% /snap/bare/5
+loop2                                                                         66,8M    0 loop  squashfs          0   100% /snap/core24/2124
+loop3                                                                           20M    0 loop  squashfs          0   100% /snap/desktop-security-center/151
+loop4                                                                         14,2M    0 loop  squashfs          0   100% /snap/desktop-security-center/188
+loop5                                                                        260,8M    0 loop  squashfs          0   100% /snap/firefox/8863
+loop6                                                                        614,5M    0 loop  squashfs          0   100% /snap/gnome-46-2404/164
+loop7                                                                        261,1M    0 loop  squashfs          0   100% /snap/firefox/8803
+loop8                                                                         12,7M    0 loop  squashfs          0   100% /snap/firmware-updater/258
+loop9                                                                        606,1M    0 loop  squashfs          0   100% /snap/gnome-46-2404/153
+loop10                                                                        16,5M    0 loop  squashfs          0   100% /snap/firmware-updater/226
+loop11                                                                        91,7M    0 loop  squashfs          0   100% /snap/gtk-common-themes/1535
+loop12                                                                        18,4M    0 loop  squashfs          0   100% /snap/prompting-client/228
+loop13                                                                         395M    0 loop  squashfs          0   100% /snap/mesa-2404/1165
+loop14                                                                        18,8M    0 loop  squashfs          0   100% /snap/prompting-client/222
+loop15                                                                         402M    0 loop  squashfs          0   100% /snap/mesa-2404/1839
+loop16                                                                        11,8M    0 loop  squashfs          0   100% /snap/snap-store/1390
+loop17                                                                        11,8M    0 loop  squashfs          0   100% /snap/snap-store/1419
+loop18                                                                        50,1M    0 loop  squashfs          0   100% /snap/snapd/27710
+loop19                                                                        50,3M    0 loop  squashfs          0   100% /snap/snapd/27738
+loop20                                                                         580K    0 loop  squashfs          0   100% /snap/snapd-desktop-integration/361
+loop21                                                                         828K    0 loop  squashfs          0   100% /snap/snapd-desktop-integration/391
+loop22                                                                       221,4M    0 loop  squashfs          0   100% /snap/thunderbird/1255
+loop23                                                                       222,1M    0 loop  squashfs          0   100% /snap/thunderbird/1274
+zram0                                                                         15,3G    0 disk  swap                       [SWAP]
+nvme0n1                     SK hynix PC711 HFS512GDE9X073N FNA7N679213407S2W 476,9G    0 disk                             
+├─nvme0n1p1                                                                      1G    0 part  vfat             1G     1% /boot/efi
+├─nvme0n1p2                                                                      2G    0 part  ext4           1,6G     8% /boot
+└─nvme0n1p3                                                                  473,9G    0 part  crypto_LUKS                
+  └─dm_crypt-0                                                               473,9G    0 crypt LVM2_member                
+    └─ubuntu--vg-ubuntu--lv                                                  473,9G    0 lvm   ext4           331G    24% /
+
+=== PYTHON ===
+Python 3.14.4
+
+=== NUMPY / BLAS ===
+NumPy: 2.3.5
+Build Dependencies:
+  blas:
+    detection method: pkgconfig
+    found: true
+    include directory: /usr/include/x86_64-linux-gnu
+    lib directory: /usr/lib/x86_64-linux-gnu
+    name: blas
+    openblas configuration: unknown
+    pc file directory: /usr/lib/x86_64-linux-gnu/pkgconfig
+    version: 3.12.1
+  lapack:
+    detection method: pkgconfig
+    found: true
+    include directory: /usr/include/x86_64-linux-gnu
+    lib directory: /usr/lib/x86_64-linux-gnu
+    name: lapack
+    openblas configuration: unknown
+    pc file directory: /usr/lib/x86_64-linux-gnu/pkgconfig
+    version: 3.12.1
+Compilers:
+  c:
+    args: -g, -O2, -Werror=implicit-function-declaration, -fno-omit-frame-pointer,
+      -mno-omit-leaf-frame-pointer, -ffile-prefix-map=$BUILDDIR=., -flto=auto, -ffat-lto-objects,
+      -fstack-protector-strong, -fstack-clash-protection, -Wformat, -Werror=format-security,
+      -fcf-protection, -fdebug-prefix-map=$BUILDDIR=/usr/src/numpy-1:2.3.5+ds-3ubuntu1,
+      -Wdate-time, -D_FORTIFY_SOURCE=3
+    commands: cc
+    linker: ld.bfd
+    linker args: -Wl,-Bsymbolic-functions, -Wl,--package-metadata=%7B%22type%22:%22deb%22%2C%22os%22:%22ubuntu%22%2C%22name%22:%22numpy%22%2C%22version%22:%221:2.3.5+ds-3ubuntu1%22%2C%22architecture%22:%22amd64%22%7D,
+      -flto=auto, -ffat-lto-objects, -Wl,-z,relro, -g, -O2, -Werror=implicit-function-declaration,
+      -fno-omit-frame-pointer, -mno-omit-leaf-frame-pointer, -ffile-prefix-map=$BUILDDIR=.,
+      -flto=auto, -ffat-lto-objects, -fstack-protector-strong, -fstack-clash-protection,
+      -Wformat, -Werror=format-security, -fcf-protection, -fdebug-prefix-map=$BUILDDIR=/usr/src/numpy-1:2.3.5+ds-3ubuntu1,
+      -Wdate-time, -D_FORTIFY_SOURCE=3
+    name: gcc
+    version: 15.2.0
+  c++:
+    args: -g, -O2, -fno-omit-frame-pointer, -mno-omit-leaf-frame-pointer, -ffile-prefix-map=$BUILDDIR=.,
+      -flto=auto, -ffat-lto-objects, -fstack-protector-strong, -fstack-clash-protection,
+      -Wformat, -Werror=format-security, -fcf-protection, -fdebug-prefix-map=$BUILDDIR=/usr/src/numpy-1:2.3.5+ds-3ubuntu1,
+      -Wdate-time, -D_FORTIFY_SOURCE=3
+    commands: c++
+    linker: ld.bfd
+    linker args: -Wl,-Bsymbolic-functions, -Wl,--package-metadata=%7B%22type%22:%22deb%22%2C%22os%22:%22ubuntu%22%2C%22name%22:%22numpy%22%2C%22version%22:%221:2.3.5+ds-3ubuntu1%22%2C%22architecture%22:%22amd64%22%7D,
+      -flto=auto, -ffat-lto-objects, -Wl,-z,relro, -g, -O2, -fno-omit-frame-pointer,
+      -mno-omit-leaf-frame-pointer, -ffile-prefix-map=$BUILDDIR=., -flto=auto, -ffat-lto-objects,
+      -fstack-protector-strong, -fstack-clash-protection, -Wformat, -Werror=format-security,
+      -fcf-protection, -fdebug-prefix-map=$BUILDDIR=/usr/src/numpy-1:2.3.5+ds-3ubuntu1,
+      -Wdate-time, -D_FORTIFY_SOURCE=3
+    name: gcc
+    version: 15.2.0
+  cython:
+    commands: cython
+    linker: cython
+    name: cython
+    version: 3.1.6
+Machine Information:
+  build:
+    cpu: x86_64
+    endian: little
+    family: x86_64
+    system: linux
+  host:
+    cpu: x86_64
+    endian: little
+    family: x86_64
+    system: linux
+SIMD Extensions:
+  baseline:
+  - SSE
+  - SSE2
+  - SSE3
+  found:
+  - SSSE3
+  - SSE41
+  - POPCNT
+  - SSE42
+  - AVX
+  - F16C
+  - FMA3
+  - AVX2
+  - AVX512F
+  - AVX512CD
+  - AVX512_SKX
+  - AVX512_CLX
+  - AVX512_CNL
+  - AVX512_ICL
+  not found:
+  - AVX512_SPR
+
+
+=== OGRANICZENIA PROCESU ===
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 125045
+max locked memory           (kbytes, -l) 8192
+max memory size             (kbytes, -m) unlimited
+open files                          (-n) 1024
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 8192
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 125045
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+
+=== ZMIENNE WĄTKÓW ===
+OPENBLAS_NUM_THREADS=<unset>
+OMP_NUM_THREADS=<unset>
+MKL_NUM_THREADS=<unset>
+
+=== REPOZYTORIUM ===
+## main...origin/main
+branch: main
+HEAD:   08adfce8d3174af456e68d53df4a4d19e9c0b684
+remote:
+origin	https://github.com/Pawcio99/riemann-terj.git (fetch)
+origin	https://github.com/Pawcio99/riemann-terj.git (push)
+
+=== ROZMIAR REPOZYTORIUM ===
+362M	/home/pawel/Dokumenty/liczby/riemann-terj
+
+=== NAJWIĘKSZE KATALOGI HOME ===
+4,0K	/home/pawel/Wideo
+12K	/home/pawel/.gnupg
+12K	/home/pawel/.ssh
+16K	/home/pawel/bin
+20K	/home/pawel/.npm-global
+52K	/home/pawel/.scid4.7
+76K	/home/pawel/.pki
+48M	/home/pawel/.claude
+128M	/home/pawel/projekty
+207M	/home/pawel/.npm
+398M	/home/pawel/.config
+502M	/home/pawel/.codex
+592M	/home/pawel/.cache
+703M	/home/pawel/Dokumenty
+1,1G	/home/pawel/.local
+1,5G	/home/pawel/snap
+2,1G	/home/pawel/Obrazy
+2,6G	/home/pawel/Pobrane
+22G	/home/pawel/.steam
+31G	/home/pawel
