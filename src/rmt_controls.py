@@ -180,6 +180,11 @@ def main() -> None:
     )
     ap.add_argument("--reps", type=int, default=5000)
     ap.add_argument("--seed", type=int, required=True)
+    ap.add_argument(
+        "--resume",
+        action="store_true",
+        help="validate existing samples and generate only missing sample indices",
+    )
     args = ap.parse_args()
 
     if args.analysis_size < 12:
@@ -207,55 +212,95 @@ def main() -> None:
         / f"matrix{matrix_size}_analysis{args.analysis_size}"
     )
 
-    if out.exists() and any(out.iterdir()):
+    populated = out.exists() and any(out.iterdir())
+    if populated and not args.resume:
         raise RuntimeError(
-            f"refusing existing populated dir: {out}"
+            f"refusing existing populated dir without --resume: {out}"
         )
     out.mkdir(parents=True, exist_ok=True)
-
-    rng = np.random.default_rng(args.seed)
-
-    for i in range(args.reps):
-        full = GEN[args.ensemble](rng, matrix_size)
-        levels = extract_analysis_levels(
-            args.ensemble,
-            full,
-            args.analysis_size,
-        )
-        if not np.all(np.diff(levels) > 0):
-            raise RuntimeError(
-                f"{args.ensemble}: analysis levels not strictly increasing"
-            )
-        atomic_npy(
-            out / f"sample_{i:05d}.npy",
-            levels,
-        )
-        if (i + 1) % 100 == 0:
-            print(
-                f"{args.ensemble} "
-                f"matrix={matrix_size} "
-                f"analysis={args.analysis_size}: "
-                f"{i + 1}/{args.reps}",
-                flush=True,
-            )
 
     lo = (matrix_size - args.analysis_size) // 2
     hi = lo + args.analysis_size
 
-    manifest = {
-        "schema": "terj-rmt-controls-v2",
+    manifest_path = out / "manifest.json"
+    expected = {
+        "schema": "terj-rmt-controls-v3",
         "ensemble": args.ensemble,
         "matrix_size": matrix_size,
         "analysis_size": args.analysis_size,
         "slice": [lo, hi],
         "reps": args.reps,
         "seed": args.seed,
+        "rng_policy": "numpy.SeedSequence([job_seed, sample_index])",
+        "resume_capable": True,
         "saved_levels_only": True,
         "full_matrices_saved": False,
     }
 
-    (out / "manifest.json").write_text(
-        json.dumps(manifest, indent=2) + "\n",
+    if manifest_path.exists():
+        old_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for key in (
+            "ensemble", "matrix_size", "analysis_size", "reps", "seed",
+            "rng_policy",
+        ):
+            if old_manifest.get(key) != expected.get(key):
+                raise RuntimeError(
+                    f"resume manifest mismatch for {key}: "
+                    f"{old_manifest.get(key)!r} != {expected.get(key)!r}"
+                )
+
+    existing = {}
+    for p in sorted(out.glob("sample_*.npy")):
+        try:
+            idx = int(p.stem.split("_", 1)[1])
+        except (IndexError, ValueError):
+            raise RuntimeError(f"unexpected sample filename: {p.name}")
+        if idx < 0 or idx >= args.reps:
+            raise RuntimeError(f"sample index outside requested reps: {p.name}")
+        arr = np.load(p, allow_pickle=False)
+        if arr.shape != (args.analysis_size,):
+            raise RuntimeError(f"bad shape in existing sample: {p}")
+        if not np.all(np.isfinite(arr)) or not np.all(np.diff(arr) > 0):
+            raise RuntimeError(f"invalid existing sample: {p}")
+        existing[idx] = p
+
+    completed = len(existing)
+    expected["completed_reps"] = completed
+    expected["status"] = "complete" if completed == args.reps else "in_progress"
+    manifest_path.write_text(
+        json.dumps(expected, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    for i in range(args.reps):
+        if i in existing:
+            continue
+        rng = np.random.default_rng(np.random.SeedSequence([args.seed, i]))
+        full = GEN[args.ensemble](rng, matrix_size)
+        levels = extract_analysis_levels(
+            args.ensemble,
+            full,
+            args.analysis_size,
+        )
+        if not np.all(np.isfinite(levels)) or not np.all(np.diff(levels) > 0):
+            raise RuntimeError(
+                f"{args.ensemble}: analysis levels invalid or not strictly increasing"
+            )
+        atomic_npy(out / f"sample_{i:05d}.npy", levels)
+        completed += 1
+        if completed % 100 == 0 or completed == args.reps:
+            print(
+                f"{args.ensemble} "
+                f"matrix={matrix_size} "
+                f"analysis={args.analysis_size}: "
+                f"{completed}/{args.reps}",
+                flush=True,
+            )
+
+    expected["completed_reps"] = completed
+    expected["status"] = "complete"
+    manifest_path.write_text(
+        json.dumps(expected, indent=2) + "\n",
         encoding="utf-8",
     )
 
