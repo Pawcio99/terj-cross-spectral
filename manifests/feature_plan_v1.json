@@ -1,0 +1,43 @@
+{
+  "schema": "terj-cross-spectral-feature-plan-v1",
+  "frozen_before_production_results": true,
+  "primary_layer": {
+    "uses_unfolding": false,
+    "features": [
+      "r1_mean",
+      "r1_median",
+      "r1_frac_lt_0_10",
+      "rk2_mean",
+      "rk2_median",
+      "rk3_mean",
+      "rk3_median",
+      "rk4_mean",
+      "rk4_median"
+    ],
+    "rationale": "Compact multiscale scale-free vector chosen before production outcomes are viewed. It avoids duplicating many strongly correlated quantiles and threshold summaries."
+  },
+  "secondary_layer": {
+    "exploratory": true,
+    "features": [
+      "r1_sd","r1_q10","r1_q25","r1_q75","r1_q90","r1_frac_lt_0_05","r1_frac_lt_0_20","r1_lag1_corr",
+      "rk2_sd","rk2_q10","rk2_q25","rk2_q75","rk2_q90","rk2_frac_lt_0_05","rk2_frac_lt_0_10","rk2_frac_lt_0_20","rk2_lag1_corr",
+      "rk3_sd","rk3_q10","rk3_q25","rk3_q75","rk3_q90","rk3_frac_lt_0_05","rk3_frac_lt_0_10","rk3_frac_lt_0_20","rk3_lag1_corr",
+      "rk4_sd","rk4_q10","rk4_q25","rk4_q75","rk4_q90","rk4_frac_lt_0_05","rk4_frac_lt_0_10","rk4_frac_lt_0_20","rk4_lag1_corr"
+    ]
+  },
+  "nulls": {
+    "riemann_primary": "GUE beta=2 finite-size matched",
+    "riemann_sensitivity": "CUE beta=2 finite-size matched",
+    "neural_primary": "real Wishart/Laguerre beta=1 finite-size matched",
+    "beta1_universality_control": "GOE beta=1",
+    "nonrepulsive_negative_control": "Poisson"
+  },
+  "residual_definition": "z_j=(S_j-mu0_j)/sd0_j using same-size matched null ensemble",
+  "cross_domain_primary_endpoint": "Euclidean distance between domain-level residual centroids",
+  "important": [
+    "Raw spectra are never compared directly across domains.",
+    "Riemann and Neural use different symmetry-specific primary nulls.",
+    "Individual gaps are not inferential replication units.",
+    "Feature membership cannot be changed after production results are inspected without a versioned protocol amendment."
+  ]
+}
