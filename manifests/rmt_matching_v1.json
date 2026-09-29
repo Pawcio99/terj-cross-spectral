@@ -1,0 +1,64 @@
+{
+  "schema": "terj-rmt-matching-v1",
+  "status": "pre-production-frozen",
+  "created_date": "2026-09-29",
+
+  "neural_matching": [
+    {
+      "network_width": 96,
+      "matrix_size": 96,
+      "analysis_size": 48,
+      "slice": [24, 72]
+    },
+    {
+      "network_width": 256,
+      "matrix_size": 256,
+      "analysis_size": 128,
+      "slice": [64, 192]
+    },
+    {
+      "network_width": 512,
+      "matrix_size": 512,
+      "analysis_size": 256,
+      "slice": [128, 384]
+    },
+    {
+      "network_width": 1024,
+      "matrix_size": 1024,
+      "analysis_size": 512,
+      "slice": [256, 768]
+    },
+    {
+      "network_width": 2048,
+      "matrix_size": 2048,
+      "analysis_size": 1024,
+      "slice": [512, 1536]
+    }
+  ],
+
+  "riemann_analysis_sizes": [
+    48,
+    128,
+    256,
+    512,
+    1024
+  ],
+
+  "null_roles": {
+    "riemann_primary": "GUE beta=2",
+    "riemann_sensitivity": "CUE beta=2",
+    "neural_primary": "real Wishart/Laguerre beta=1",
+    "beta1_universality": "GOE beta=1",
+    "negative_nonrepulsive": "Poisson"
+  },
+
+  "rules": {
+    "compare_equal_analysis_sizes": true,
+    "neural_use_central_50_percent": true,
+    "wishart_use_central_50_percent": true,
+    "gue_use_bulk_only": true,
+    "goe_use_bulk_only": true,
+    "raw_cross_domain_comparison": false,
+    "individual_gaps_are_replicates": false
+  }
+}
