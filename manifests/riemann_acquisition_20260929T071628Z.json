@@ -1,0 +1,108 @@
+{
+  "schema": "terj-riemann-acquisition-v1",
+  "created_utc": "2026-09-29T07:16:28.525925+00:00",
+  "records": [
+    {
+      "name": "first_2m",
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros6.gz",
+      "downloaded_path": "/home/pawel/projekty/terj-cross-spectral/raw/riemann/odlyzko/original/odlyzko_first_2m.gz",
+      "sha256": "6acacb4707c429bf368f32823a8eef0e0737b6318d3e144c78975a4986d155da",
+      "bytes": 14369780,
+      "start_index": "1",
+      "count_expected": 2001052,
+      "base": "0",
+      "holdout": false,
+      "accuracy_note": "Odlyzko index page: accurate to within 4e-9",
+      "header_preview": [
+        "     14.134725142",
+        "     21.022039639",
+        "     25.010857580",
+        "     30.424876126",
+        "     32.935061588",
+        "     37.586178159",
+        "     40.918719012"
+      ],
+      "holdout_slice_start": null,
+      "holdout_slice_count": null,
+      "action": "downloaded_hashed_converted",
+      "converted": "/home/pawel/projekty/terj-cross-spectral/raw/riemann/odlyzko/converted/odlyzko_first_2m.npz",
+      "n": 2001052,
+      "offset_first": 14.134725142,
+      "offset_last": 1132490.658714411
+    },
+    {
+      "name": "1e12",
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros3",
+      "downloaded_path": "/home/pawel/projekty/terj-cross-spectral/raw/riemann/odlyzko/original/odlyzko_1e12.txt",
+      "sha256": "75a1f1a978d5e3eddd16518f661d41a95a40b33782389ba02ec4ed0ce0764807",
+      "bytes": 180287,
+      "start_index": "1000000000001",
+      "count_expected": 10000,
+      "base": "267653395647",
+      "holdout": false,
+      "accuracy_note": "header: guaranteed accurate to within 1e-8",
+      "header_preview": [
+        "Values of gamma - 267653395647, where gamma runs over the heights of the",
+        "zeros of the Riemann zeta numbered 10^12 + 1 through 10^12 + 10^4.  Thus ",
+        "zero # 10^12 + 1 is actually ",
+        "",
+        "     1/2 + i * 267,653,395,648.8475231278...",
+        "",
+        "Values are guaranteed to be accurate only to within 10^(-8)."
+      ],
+      "holdout_slice_start": null,
+      "holdout_slice_count": null,
+      "action": "downloaded_hashed_converted",
+      "converted": "/home/pawel/projekty/terj-cross-spectral/raw/riemann/odlyzko/converted/odlyzko_1e12.npz",
+      "n": 10000,
+      "offset_first": 1.8475231278,
+      "offset_last": 2569.0462708995
+    },
+    {
+      "name": "1e21",
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros4",
+      "downloaded_path": "/home/pawel/projekty/terj-cross-spectral/raw/riemann/odlyzko/original/odlyzko_1e21.txt",
+      "sha256": "10d9f7dab2bbfff6b8befbe6f765969b0b3f38f6110ed1df423931addd52da8f",
+      "bytes": 160319,
+      "start_index": "1000000000000000000001",
+      "count_expected": 10000,
+      "base": "144176897509546973000",
+      "holdout": false,
+      "accuracy_note": "header: probably accurate to within 1e-6",
+      "header_preview": [
+        "Values of gamma - 144176897509546973000, where gamma runs over the heights ",
+        "of the zeros of the Riemann zeta numbered 10^21 + 1 through 10^21 + 10^4.  ",
+        "Thus zero # 10^21 + 1 is actually ",
+        "",
+        "      1/2 + i * 144,176,897,509,546,973,538.49806962...",
+        "",
+        "Values are not guaranteed, and are probably accurate to within 10^(-6)."
+      ],
+      "holdout_slice_start": null,
+      "holdout_slice_count": null,
+      "action": "downloaded_hashed_converted",
+      "converted": "/home/pawel/projekty/terj-cross-spectral/raw/riemann/odlyzko/converted/odlyzko_1e21.npz",
+      "n": 10000,
+      "offset_first": 538.49806962,
+      "offset_last": 1947.74231109
+    },
+    {
+      "name": "1e22",
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros5",
+      "downloaded_path": "/home/pawel/projekty/terj-cross-spectral/raw/riemann/holdout_1e22/odlyzko_1e22.txt",
+      "sha256": "250ac4ba722c6face4d07c05777376fc2b9bc021b05232e8f53c91b1eb2b7e0d",
+      "bytes": 170318,
+      "start_index": "10000000000000000000001",
+      "count_expected": 10000,
+      "base": "1370919909931995300000",
+      "holdout": true,
+      "accuracy_note": "header: probably accurate to within 1e-6",
+      "header_preview": [
+        "WITHHELD: strict holdout"
+      ],
+      "holdout_slice_start": 1808,
+      "holdout_slice_count": 8192,
+      "action": "downloaded_and_hashed_only"
+    }
+  ]
+}
