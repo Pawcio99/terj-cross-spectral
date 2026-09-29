@@ -27,7 +27,7 @@ def main():
               f"  --matrix-size {m} \\",
               f"  --analysis-size {a} \\",
               f"  --reps {reps} \\",
-              f"  --seed {seed}",
+              f"  --seed {seed} \\\",\n              "  --resume",
               ""
             ]
     if total != int(plan["total_samples"]):
