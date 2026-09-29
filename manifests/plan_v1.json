@@ -1,8 +1,8 @@
 {
   "schema": "terj-cross-spectral-production-plan-v1",
   "created_utc": "2026-09-29T06:48:11.517632+00:00",
-  "repo": "/home/pawel/Dokumenty/liczby/riemann-terj",
-  "workspace": "/home/pawel/projekty/terj-cross-spectral-work",
+  "repo": "/home/pawel/projekty/terj-cross-spectral",
+  "workspace": "/home/pawel/projekty/terj-cross-spectral",
   "neural": {
     "widths": [
       96,
@@ -137,8 +137,8 @@
       "1e12",
       "1e21"
     ],
-    "strict_holdout": "1e22",
-    "holdout_policy": "download_and_hash_allowed; feature inspection forbidden before final freeze",
+    "strict_holdout": "1e22_tail8192",
+    "holdout_policy": "source file may be downloaded and hashed; strict tail offsets 1808..9999 must not be parsed or used before final Stage A freeze",
     "additional_source": "first 2,001,052 Odlyzko zeros plus reproducible Arb/flint blocks"
   },
   "stage_a": {
